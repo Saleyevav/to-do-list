@@ -5,7 +5,7 @@ const MyInput = () => {
         <div className={classes.wrapper}>
             <div className={classes.border}>
                 <input type="text" className={classes.input} />
-                <div className={classes.button}>+</div>
+                <div className={classes.button}><div>+</div></div>
 
             </div>
         </div>

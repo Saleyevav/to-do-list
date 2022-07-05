@@ -27,11 +27,11 @@
     text-align: center;
     text-justify: auto;
     font-size: 40px;
+    font-weight: bold;
     line-height: 50%;
     height: 30px;
     width: 30px;
     border-radius: 50%;
     background-color: #4a47f3;
-    vertical-align: middle;
     cursor: pointer;
 }
