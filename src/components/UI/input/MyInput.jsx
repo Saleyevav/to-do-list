@@ -2,9 +2,12 @@ import React from "react";
 import classes from './MyInput.module.css';
 const MyInput = () => {
     return (
-        <div className="wrapper">
-            <input type="text" className="input" />
-            <div className="button"></div>
+        <div className={classes.wrapper}>
+            <div className={classes.border}>
+                <input type="text" className={classes.input} />
+                <div className={classes.button}>+</div>
+
+            </div>
         </div>
     );
 }

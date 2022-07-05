@@ -1,0 +1,37 @@
+.wrapper {
+    display: flex;
+}
+
+.border {
+    border: 2px solid #4a47f3;
+    border-radius: 30px;
+    display: flex;
+    padding: 5px 7px;
+
+}
+
+
+
+.input {
+    border: none;
+    outline: none;
+    height: 30px;
+    font-size: 20px;
+    width: 400px;
+}
+
+
+
+.button {
+    color: white;
+    text-align: center;
+    text-justify: auto;
+    font-size: 40px;
+    line-height: 50%;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #4a47f3;
+    vertical-align: middle;
+    cursor: pointer;
+}
