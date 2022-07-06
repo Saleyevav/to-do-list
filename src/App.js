@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useState } from "react";
 import "./App.css";
 import ToDoList from "./components/ToDoList";
@@ -10,10 +10,16 @@ function App() {
     { name: "Умыться", isDone: false },
     { name: "Захватить весь мир", isDone: false },
   ]);
+  const inputRef = useRef();
+  const addToDo = () => {
+    let value = inputRef.current.value;
+    setToDoList([...toDoList, { name: value, isDone: false }])
+
+  };
   return (
     <div className="App">
       <ToDoList list={toDoList} />
-      <MyInput />
+      <MyInput ref={inputRef} onBtnClick={addToDo} />
     </div>
   );
 }
