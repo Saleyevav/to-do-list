@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <ToDoList list={toDoList} />
-      <MyInput ref={inputRef} onBtnClick={addToDo} />
+      <MyInput ref={inputRef} onBtnClickFunction={addToDo} />
     </div>
   );
 }

@@ -5,7 +5,7 @@ const MyInput = React.forwardRef((props, ref) => {
         <div className={classes.wrapper}>
             <div className={classes.border}>
                 <input ref={ref} type="text" className={classes.input} />
-                <div className={classes.button} onClick={props.onBtnClick}>+</div>
+                <div className={classes.button} onClick={props.onBtnClickFunction}>+</div>
             </div>
         </div>
     );
