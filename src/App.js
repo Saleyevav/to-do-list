@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { useState } from "react";
 import "./App.css";
 import ToDoList from "./components/ToDoList";
-import MyInput from "./components/UI/input/MyInput";
+import InputWithButton from "./components/ImputWithButton";
 
 function App() {
   const [toDoList, setToDoList] = useState([
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <ToDoList list={toDoList} />
-      <MyInput ref={inputRef} onBtnClickFunction={addToDo} />
+      <InputWithButton ref={inputRef} onBtnClickFunction={addToDo} />
     </div>
   );
 }

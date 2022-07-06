@@ -1,6 +1,6 @@
 import React from "react";
-import classes from './MyInput.module.css';
-const MyInput = React.forwardRef((props, ref) => {
+import classes from './styles.module.css';
+const InputWithButton = React.forwardRef((props, ref) => {
     return (
         <div className={classes.wrapper}>
             <div className={classes.border}>
@@ -11,4 +11,4 @@ const MyInput = React.forwardRef((props, ref) => {
     );
 });
 
-export default MyInput;
+export default InputWithButton;
