@@ -1,9 +1,11 @@
 import React from "react";
+import classes from './styles.module.css';
 
 const ToDo = ({ name, id }) => {
   return (
-    <div>
-      {id}. {name}
+    <div className={classes.wrapper} >
+      <div className={classes.button} ></div>
+      <span>{id}. {name}</span>
     </div>
   );
 };
