@@ -17,4 +17,10 @@
     margin-right: 5px;
 }
 
-.text {}
+.isDone {
+    text-decoration: line-through;
+}
+
+.notDone {
+    text-decoration: none;
+}

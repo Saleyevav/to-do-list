@@ -7,7 +7,7 @@ import InputWithButton from "./components/ImputWithButton";
 function App() {
   const [toDoList, setToDoList] = useState([
     { name: "Проснуться", isDone: false },
-    { name: "Умыться", isDone: false },
+    { name: "Умыться", isDone: true },
     { name: "Захватить весь мир", isDone: false },
   ]);
   const inputRef = useRef();
@@ -18,7 +18,7 @@ function App() {
   };
   return (
     <div className="App">
-      <ToDoList list={toDoList} />
+      <ToDoList list={toDoList} setList={setToDoList} />
       <InputWithButton ref={inputRef} onBtnClickFunction={addToDo} />
     </div>
   );
