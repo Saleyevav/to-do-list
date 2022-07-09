@@ -1,9 +1,9 @@
 import React from "react";
 import classes from './styles.module.css';
 
-const ToDo = ({ name, id, style, isDone }) => {
+const ToDo = ({ title, id, style, completed }) => {
   let textStyle = '';
-  isDone ? textStyle = 'isDone' : textStyle = 'notDone';
+  completed ? textStyle = 'completed' : textStyle = 'notCompleted';
   const onBtnClickFunction = () => {
     console.log('#' + id + ' is click')
 
@@ -11,7 +11,7 @@ const ToDo = ({ name, id, style, isDone }) => {
   return (
     <div className={classes.wrapper} style={style}>
       <div className={classes.button} onClick={onBtnClickFunction}></div>
-      <span className={classes[textStyle]}>{id}. {name}</span>
+      <span className={classes[textStyle]}>{id}. {title}</span>
     </div>
   );
 };

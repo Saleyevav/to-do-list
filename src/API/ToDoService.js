@@ -1,9 +1,9 @@
 export default class ToDoService {
-    static getAll(limit = 10, page = 1) {
+    static getAll() {
         const response = [
-            { name: "Проснуться", isDone: false },
-            { name: "Умыться", isDone: true },
-            { name: "Захватить весь мир", isDone: false },
+            { title: "Проснуться", completed: false },
+            { title: "Умыться", completed: true },
+            { title: "Захватить весь мир", completed: false },
         ]
         return response;
     }

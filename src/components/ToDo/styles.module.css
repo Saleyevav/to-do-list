@@ -17,10 +17,10 @@
     margin-right: 5px;
 }
 
-.isDone {
+.completed {
     text-decoration: line-through;
 }
 
-.notDone {
+.notCompleted {
     text-decoration: none;
 }
