@@ -4,8 +4,7 @@ import "./App.css";
 import ToDoList from "./components/ToDoList";
 import InputWithButton from "./components/InputWithButton";
 import ToDoService from "./API/ToDoService";
-import Counter from "./components/Counter";
-import DeleteButton from "./components/DeleteButton";
+import Menu from "./components/Menu";
 
 function App() {
   const [toDoList, setToDoList] = useState(ToDoService.getAll());
@@ -23,21 +22,9 @@ function App() {
     setToDoList([...toDoList]);
   };
 
-  const clearToDoList = () => {
-    setToDoList([]);
-  };
-
   return (
     <div className="App">
-      <Counter title="Tasks" count={toDoList.length} />
-      <Counter
-        title="Tasks Done"
-        count={toDoList.reduce(
-          (sum, item) => (item.completed ? sum + 1 : sum),
-          0
-        )}
-      />
-      <DeleteButton onBtnClickFunction={clearToDoList} />
+      <Menu toDoList={toDoList} clearToDoList={() => setToDoList([])} />
       <ToDoList
         list={toDoList}
         setList={setToDoList}

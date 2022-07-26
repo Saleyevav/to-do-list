@@ -1,0 +1,6 @@
+.wrapper {
+  display: flex;
+  justify-content: right;
+  padding: 20px;
+  background-color: rgb(252, 249, 249);
+}
