@@ -1,0 +1,26 @@
+.wrapper {
+    border: 1px solid #6d6b6b;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+}
+
+.button {
+    color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: #19e23b url(./images/agree.png) center no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+.notCompleted {
+    text-decoration: none;
+}

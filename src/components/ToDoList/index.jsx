@@ -1,16 +1,16 @@
 import React from "react";
-import ToDo from "./ToDo";
+import Task from "./Task";
 import classes from "./styles.module.css";
 const ToDoList = ({ list, completeFunction }) => {
   return (
     <div className={classes.wrapper}>
-      {list.map((toDo, index) => (
-        <ToDo
+      {list.map((task, index) => (
+        <Task
           key={index}
           id={index + 1}
-          title={toDo.title}
+          title={task.title}
           style={{ marginBottom: 10 }}
-          completed={toDo.completed}
+          completed={task.completed}
           completeFunction={completeFunction}
         />
       ))}

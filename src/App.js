@@ -11,7 +11,7 @@ function App() {
   const [toDoList, setToDoList] = useState(ToDoService.getAll());
   const inputRef = useRef();
 
-  const addToDo = () => {
+  const addTask = () => {
     let value = inputRef.current.value;
     setToDoList([...toDoList, { title: value, completed: false }]);
   };
@@ -43,7 +43,7 @@ function App() {
         setList={setToDoList}
         completeFunction={completeFunction}
       />
-      <InputWithButton ref={inputRef} onBtnClickFunction={addToDo} />
+      <InputWithButton ref={inputRef} onBtnClickFunction={addTask} />
     </div>
   );
 }
