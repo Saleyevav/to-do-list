@@ -1,0 +1,15 @@
+.wrapper {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+  height: 35px;
+  width: 80px;
+  display: block;
+}
+
+.img {
+  position: relative;
+  top: 3px;
+}

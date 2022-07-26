@@ -5,6 +5,7 @@ import ToDoList from "./components/ToDoList";
 import InputWithButton from "./components/InputWithButton";
 import ToDoService from "./API/ToDoService";
 import Counter from "./components/Counter";
+import DeleteButton from "./components/DeleteButton";
 
 function App() {
   const [toDoList, setToDoList] = useState(ToDoService.getAll());
@@ -22,6 +23,10 @@ function App() {
     setToDoList([...toDoList]);
   };
 
+  const clearToDoList = () => {
+    setToDoList([]);
+  };
+
   return (
     <div className="App">
       <Counter title="Tasks" count={toDoList.length} />
@@ -32,6 +37,7 @@ function App() {
           0
         )}
       />
+      <DeleteButton onBtnClickFunction={clearToDoList} />
       <ToDoList
         list={toDoList}
         setList={setToDoList}
