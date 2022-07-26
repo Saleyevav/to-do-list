@@ -24,7 +24,14 @@ function App() {
 
   return (
     <div className="App">
-      <Counter title="Tasks" count="3" />
+      <Counter title="Tasks" count={toDoList.length} />
+      <Counter
+        title="Tasks Done"
+        count={toDoList.reduce(
+          (sum, item) => (item.completed ? sum + 1 : sum),
+          0
+        )}
+      />
       <ToDoList
         list={toDoList}
         setList={setToDoList}
