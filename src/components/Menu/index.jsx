@@ -7,13 +7,11 @@ const Menu = ({ toDoList, clearToDoList }) => {
   return (
     <div className={classes.wrapper}>
       <div>
-        <Counter
-          title="Tasks"
-          count={toDoList.length}
-          style={{ marginLeft: 10 }}
-        />
+        <Counter title="Tasks" count={toDoList.length} />
+
         <Counter
           style={{ marginLeft: 10 }}
+          className={classes.marginLeft}
           title="Tasks Done"
           count={toDoList.reduce(
             (sum, item) => (item.completed ? sum + 1 : sum),
@@ -21,10 +19,9 @@ const Menu = ({ toDoList, clearToDoList }) => {
           )}
         />
       </div>
-
       <DeleteButton
-        style={{ marginLeft: 10 }}
         onBtnClickFunction={clearToDoList}
+        style={{ marginLeft: 10 }}
       />
     </div>
   );
