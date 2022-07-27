@@ -12,6 +12,7 @@ function App() {
 
   const addTask = () => {
     let value = inputRef.current.value;
+    inputRef.current.value = "";
     setToDoList([...toDoList, { title: value, completed: false }]);
   };
 
