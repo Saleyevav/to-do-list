@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import classes from "./styles.module.css";
 
 export const Task = ({
@@ -9,16 +10,17 @@ export const Task = ({
   completeTask,
   deleteTask,
 }) => {
-  let textStyle = "";
-  completed ? (textStyle = "completed") : (textStyle = "notCompleted");
   return (
     <div className={classes.wrapper} style={style}>
-      <div className={classes.button} onClick={() => completeTask(id)}></div>
-      <span className={classes[textStyle]}>
+      <div
+        className={classNames(classes.button, classes.completeButton)}
+        onClick={() => completeTask(id)}
+      ></div>
+      <span className={classNames({ [classes.completed]: completed })}>
         {id}. {title}
       </span>
       <div
-        className={classes.deleteButton}
+        className={classNames(classes.button, classes.deleteButton)}
         onClick={() => deleteTask(id)}
       ></div>
     </div>
