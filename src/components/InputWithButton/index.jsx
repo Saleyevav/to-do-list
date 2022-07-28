@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./styles.module.css";
-const InputWithButton = React.forwardRef((props, ref) => {
+export const InputWithButton = React.forwardRef((props, ref) => {
   const keydown = (e) => {
     if (e.keyCode === 13) {
       props.onBtnClickFunction();
@@ -22,5 +22,3 @@ const InputWithButton = React.forwardRef((props, ref) => {
     </div>
   );
 });
-
-export default InputWithButton;

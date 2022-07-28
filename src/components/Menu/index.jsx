@@ -1,9 +1,9 @@
 import React, { useMemo } from "react";
 import classes from "./styles.module.css";
-import Counter from "./Counter";
-import DeleteButton from "./DeleteButton";
+import { Counter } from "./Counter";
+import { DeleteButton } from "./DeleteButton";
 
-const Menu = ({ toDoList, clearToDoList }) => {
+export const Menu = ({ toDoList, clearToDoList }) => {
   const completedTasks = useMemo(
     () => toDoList.filter((task) => task.completed),
     [toDoList]
@@ -26,5 +26,3 @@ const Menu = ({ toDoList, clearToDoList }) => {
     </div>
   );
 };
-
-export default Menu;

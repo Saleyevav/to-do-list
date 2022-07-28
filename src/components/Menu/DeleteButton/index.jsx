@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./styles.module.css";
 import trash from "./images/trash.png";
-const DeleteButton = (props) => {
+export const DeleteButton = (props) => {
   return (
     <div
       onClick={props.onBtnClickFunction}
@@ -13,5 +13,3 @@ const DeleteButton = (props) => {
     </div>
   );
 };
-
-export default DeleteButton;
