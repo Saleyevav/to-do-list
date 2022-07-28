@@ -3,7 +3,7 @@ import { useState } from "react";
 import "./App.css";
 import ToDoList from "./components/ToDoList";
 import InputWithButton from "./components/InputWithButton";
-import ToDoService from "./API/ToDoService";
+import { ToDoService } from "./API/ToDoService";
 import Menu from "./components/Menu";
 import { useCallback } from "react";
 import { useEffect } from "react";
