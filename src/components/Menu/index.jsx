@@ -11,7 +11,6 @@ const Menu = ({ toDoList, clearToDoList }) => {
 
         <Counter
           style={{ marginLeft: 10 }}
-          className={classes.marginLeft}
           title="Tasks Done"
           count={toDoList.reduce(
             (sum, item) => (item.completed ? sum + 1 : sum),
