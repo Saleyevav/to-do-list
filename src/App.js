@@ -37,12 +37,13 @@ function App() {
 
   const clearToDoList = useCallback(() => setToDoList([]), []);
 
+  async function getTasks() {
+    const res = await ToDoService.getAll();
+    setToDoList(res);
+  }
+
   useEffect(() => {
-    const getData = async () => {
-      const res = await ToDoService.getAll();
-      setToDoList(res);
-    };
-    getData();
+    getTasks();
   }, []);
 
   return (
