@@ -16,9 +16,11 @@ export const Task = ({
         className={classNames(classes.button, classes.completeButton)}
         onClick={() => completeTask(id)}
       ></div>
-      <span className={classNames({ [classes.completed]: completed })}>
+      <div
+        className={classNames(classes.text, { [classes.completed]: completed })}
+      >
         {id}. {title}
-      </span>
+      </div>
       <div
         className={classNames(classes.button, classes.deleteButton)}
         onClick={() => deleteTask(id)}
